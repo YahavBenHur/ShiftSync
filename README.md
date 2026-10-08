@@ -1,8 +1,11 @@
+
 # ShiftSync
 
 An Android app for employee shift scheduling and workforce management, built in Java with Firebase.
 
 ## Demo Video
+
+https://github.com/user-attachments/assets/5998fa1b-007d-4ed8-9ad4-e8e428866703
 
 ## Features
 

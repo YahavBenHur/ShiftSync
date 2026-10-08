@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="הרשמה"
+            android:textSize="28sp"
+            android:layout_marginBottom="32dp" />
+
+        <EditText
+            android:id="@+id/registerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="שם מלא"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/registerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="טלפון"
+            android:inputType="phone"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/registerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="כתובת"
+            android:inputType="textPostalAddress"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/registerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="אימייל"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="סיסמה"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="נרשמים בתור:"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="4dp" />
+
+        <RadioGroup
+            android:id="@+id/roleRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/roleManagerRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="מנהל" />
+
+            <RadioButton
+                android:id="@+id/roleEmployeeRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="עובד"
+                android:checked="true" />
+
+        </RadioGroup>
+
+        <!-- מוצג רק כשבוחרים "עובד" - הקוד שהעובד מקבל מהמנהל שלו -->
+        <EditText
+            android:id="@+id/groupCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="קוד קבוצה (מקבלים מהמנהל)"
+            android:inputType="textCapCharacters"
+            android:layout_marginBottom="24dp" />
+
+        <!-- מוצג רק כשבוחרים "מנהל" - הסבר שיווצר קוד אוטומטית -->
+        <TextView
+            android:id="@+id/managerInfoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ייווצר לך קוד קבוצה אוטומטית אחרי ההרשמה - תעביר אותו לעובדים שלך"
+            android:textSize="13sp"
+            android:textColor="#888888"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הרשמה" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shiftsyncproject.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_shiftsFragment"
+            app:destination="@id/shiftsFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.shiftsyncproject.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shiftsFragment"
+        android:name="com.example.shiftsyncproject.ShiftsFragment"
+        android:label="fragment_shifts"
+        tools:layout="@layout/fragment_shifts">
+
+        <action
+            android:id="@+id/action_shiftsFragment_to_createShiftFragment"
+            app:destination="@id/createShiftFragment" />
+
+        <action
+            android:id="@+id/action_shiftsFragment_to_payslipFragment"
+            app:destination="@id/payslipFragment" />
+
+        <action
+            android:id="@+id/action_shiftsFragment_to_openShiftsFragment"
+            app:destination="@id/openShiftsFragment" />
+
+        <action
+            android:id="@+id/action_shiftsFragment_to_assignmentsFragment"
+            app:destination="@id/assignmentsFragment" />
+
+        <action
+            android:id="@+id/action_shiftsFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createShiftFragment"
+        android:name="com.example.shiftsyncproject.CreateShiftFragment"
+        android:label="fragment_create_shift"
+        tools:layout="@layout/fragment_create_shift" />
+
+    <fragment
+        android:id="@+id/payslipFragment"
+        android:name="com.example.shiftsyncproject.PayslipFragment"
+        android:label="fragment_payslip"
+        tools:layout="@layout/fragment_payslip" />
+
+    <fragment
+        android:id="@+id/openShiftsFragment"
+        android:name="com.example.shiftsyncproject.OpenShiftsFragment"
+        android:label="fragment_open_shifts"
+        tools:layout="@layout/fragment_open_shifts" />
+
+    <fragment
+        android:id="@+id/assignmentsFragment"
+        android:name="com.example.shiftsyncproject.AssignmentsFragment"
+        android:label="fragment_assignments"
+        tools:layout="@layout/fragment_assignments" />
+
+</navigation>
